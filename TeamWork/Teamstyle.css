@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img//ChatGPT Image 30 бер. 2025 р., 02_31_40.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img\\ChatGPT Image 30 бер. 2025 р., 02_31_40.png");
     background-size: cover;
     background-position: center;
     color: #fefae0;
