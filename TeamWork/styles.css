@@ -70,7 +70,7 @@ nav ul li a:hover {
     text-align: center;
     color: white;
     font-size: clamp(1.5rem, 2.5vw, 3rem);
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("C:\\Users\\solij\\OneDrive\\Рабочий стол\\ChatGPT Image 29 бер. 2025 р., 23_39_31.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/ChatGPT Image 29 бер. 2025 р., 23_39_31.png");
     background-size: cover;
     background-position: center;
 }
