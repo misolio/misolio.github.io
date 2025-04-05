@@ -1,0 +1,153 @@
+/* Глобальні налаштування */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fefae0;
+    color: #333;
+}
+
+/* Шапка сайту */
+header {
+    background: #bc6c25;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Інформаційний блок */
+.info-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("C:\\Users\\solij\\OneDrive\\Рабочий стол\\ChatGPT Image 30 бер. 2025 р., 02_32_07.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-overlay {
+    
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.info-overlay h1 {
+    font-size: clamp(2rem, 3vw, 4rem);
+    margin-bottom: 0.5rem;
+}
+
+.info-overlay p {
+    font-size: clamp(1rem, 1.5vw, 1.8rem);
+}
+
+/* Форма авторизації */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 5vh auto;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: #bc6c25;
+    margin-bottom: 1.5rem;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background: #bc6c25;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background: #9b5a1a;
+}
+
+.auth-container p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.auth-container a {
+    color: #bc6c25;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Підвал */
+footer {
+    background: #803407;
+    color: white;
+    text-align: center;
+    padding: 2% 0;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    margin-top: 2%;
+}

@@ -1,0 +1,195 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("C:\\Users\\solij\\OneDrive\\Рабочий стол\\ChatGPT Image 30 бер. 2025 р., 02_31_40.png");
+    background-size: cover;
+    background-position: center;
+    color: #fefae0;
+}
+
+
+/* Шапка */
+header {
+    background: #bc6c25;
+    color: white;
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Навігація */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Основний контент */
+main {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Контейнер команд */
+.teams-container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Список команд */
+.team-list {
+    margin-top: 20px;
+}
+
+/* Блок команди */
+.team {
+    display: flex;
+    align-items: center;
+    background: #dda15e;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.team:hover {
+    background: #bc6c25;
+}
+
+/* Іконка команди */
+.team-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: white;
+    color: #bc6c25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Інформація про команду */
+.team-info {
+    text-align: left;
+}
+
+.team-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.team-info p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+/* Форма */
+.create-team-form {
+    margin-top: 20px;
+}
+
+.create-team-form input {
+    width: 75%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #bc6c25;
+    border-radius: 5px;
+}
+
+.create-team-form button {
+    background: #bc6c25;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.create-team-form button:hover {
+    background: #803407;
+}
+
+/* Підвал */
+footer {
+    background: #803407;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .teams-container {
+        width: 95%;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .create-team-form input {
+        width: 70%;
+    }
+}
