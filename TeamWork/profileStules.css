@@ -37,18 +37,20 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2vw;
+    gap: 20px;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: 1.2rem;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 nav ul li a:hover {
