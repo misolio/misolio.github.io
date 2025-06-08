@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої рецепти | Fork & Share</title>
+    <link rel="stylesheet" href="reciepts.css">
+    <script src="recieptFunction.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Мої рецепти</h1>
+        </header>
+        <nav>
+            <a href="lab1.html">Main</a>
+        </nav>
+
+        <!-- Форма для додавання нового рецепта -->
+        <div class="form-container">
+            <h2>Додати новий рецепт</h2>
+            <input type="text" id="recipeTitle" placeholder="Назва рецепту">
+            <textarea id="recipeDescription" placeholder="Опис рецепту"></textarea>
+
+            <!-- Вибір категорії -->
+            <select id="recipeCategory">
+                <option value="baking">Baking</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="desserts">Desserts</option>
+                <option value="lunch">Lunch</option>
+                <option value="main-dishes">Main dishes</option>
+                <option value="snacks">Snacks</option>
+            </select>
+
+            <!-- Поле для завантаження фото -->
+            <input type="file" id="recipeImage" accept="image/*">
+
+            <button onclick="addRecipe()">Додати</button>
+        </div>
+
+        <!-- Відображення всіх рецептів -->
+        <div class="recipes" id="recipeList"></div>
+
+        <footer>© 2025 Fork & Share</footer>
+    </div>
+</body>
+</html>

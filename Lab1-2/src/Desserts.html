@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts | Fork & Share</title>
+    <link rel="stylesheet" href="lab1.css">
+    <script src="function.js" defer></script>
+
+</head>
+<body data-category="desserts">
+    <div class="container">
+        <header id="desserts">
+            <h1>Desserts</h1>
+        </header>
+        <nav>
+            <a href="lab1.html">Main</a>
+            <a href="MyReciepts.html">My reciepts</a>
+        </nav>
+
+        <section class="recipes" id="recipeList">
+        </section>
+
+        <footer>© 2025 Fork & Share</footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let category = document.body.getAttribute("data-category"); // Читаємо категорію з атрибута body
+            loadRecipes(category);
+        });
+
+    </script>
+</body>
+</html>
