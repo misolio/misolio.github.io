@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Helvetica, sans-serif;
+  background: #efebe6;
+  color: #212020;
+  display: flex;
+  flex-direction: column;
+  align-items: auto;
+  max-width: 62%;
+  
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-areas: 
+      "header"
+      "nav"
+      "main"
+      "footer";
+  gap:0px;
+  padding: 10px;
+  border-radius: 15px;
+}
+header {
+  grid-area: header;
+  position: relative;
+  max-height: 300px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header h1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 2.5rem;
+  position: absolute;
+}
+
+#baking{
+  background: url("https://shuba.life/static/content/thumbs/738x410/c/1d/7rn2gt---c9x5x50px50p-up--97c0d489195047b3c1b42d46b4a941dc.jpg") no-repeat center/cover;
+}
+#breakfast{
+  background: url("https://st4.depositphotos.com/32856862/40593/i/450/depositphotos_405934468-stock-photo-food-sweet-sandwich-table.jpg") no-repeat center/cover;
+}
+#lunch{
+  background: url("https://oryoki.de/media/image/news/98/md/bentobox_preview.jpg") no-repeat center/cover;
+}
+#snacks{
+  background: url("https://ritakafija.lv/wp-content/uploads/2017/02/nn-1.jpg") no-repeat center/cover;
+}
+#desserts{
+  background: url("https://www.foodandwine.com/thmb/ckc6L6xKox0WfpfO6dMkuVGPQOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Angel-Food-Cake-with-Three-Berry-Compote-FT-RECIPE0323-541a780b871441e0ab14383ee38acc44.jpg") no-repeat center/cover;
+}
+#main-dishes{
+  background: url("https://img.freepik.com/premium-photo/roasted-potatoes-with-spices-herbs-kitchen-table-top-view_341862-13420.jpg?w=360") no-repeat center/cover;
+}
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  display: block;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+nav {
+  grid-area: nav;
+  background: #595240;
+  display: flex;
+  justify-content: flex-end; /* Вирівнює іконки вправо */
+  align-items: center;
+  padding: 1dvh 20px;
+  margin-top: -10px;
+ 
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+}
+nav.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background: #595240;
+  padding: 10px 20px;
+}
+
+.nav-right {
+  display: flex;
+ 
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  padding: 8px 12px;
+}
+
+.nav-right a:hover {
+  background: #403b2c;
+}
+
+.categories-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+.category-item {
+  width: 90%;
+  max-width: 500px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.category-item:hover {
+  transform: scale(1.05); 
+}
+.category-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+.category-item h2 {
+  position: relative;
+  z-index: 1;
+}
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: 100%;
+  justify-items: stretch;
+}
+
+.recipe-card {
+  margin: 0;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  width: 100%; 
+}
+
+
+.recipe-card:hover {
+  transform: scale(1.05);
+}
+
+.recipe-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.recipe-overlay h3, 
+.recipe-overlay p {
+  color: white;
+  text-shadow:#212020;
+  margin-bottom: 8px;
+  text-align: left; 
+}
+
+.recipe-card p {
+  font-size: 14px;
+  color:  #efebe6 ;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 90%; /* Щоб текст не виходив за межі */
+}
+
+.recipe-card .delete-btn {
+  background: #5b0a1a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+.recipe-card .delete-btn:hover {
+  background: #5b0a1a;
+}
+.welcome-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.welcome-section p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.info-section {
+  background: #fff;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-section h2 {
+  margin-bottom: 15px;
+  color: #5b0a1a;
+}
+
+.info-section ul,
+.info-section ol {
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.info-section li {
+  margin-bottom: 10px;
+}
+
+blockquote {
+  background: #f9f6f3;
+  padding: 15px;
+  border-left: 5px solid #5b0a1a;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+
+.form-container {
+  background: #efebe6;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 100%;
+}
+.form-container input, .form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #efebe6;
+  border-radius: 10px;
+}
+.form-container button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #595240;
+  color: #efebe6;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.comment-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #5b0a1a;
+  color: #efebe6;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.create-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #5b0a1a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-btn:hover {
+  background-color: #7b1e2f;
+}
+
+
+.comment-link:hover {
+  background-color: #5b0a1a;
+}
+footer {
+  background: #121211;
+  color: #efebe6;
+  text-align: center;
+  max-height:300px ;
+}
+@media (max-width: 800px) {
+  body{
+    max-width: 100%;
+  }
+  .container {
+      width: 95%;
+  }
+  .recipes {
+      grid-template-columns: 1fr;
+  }
+  .recipe-card {
+      max-width: 100%;
+  }
+}  
+

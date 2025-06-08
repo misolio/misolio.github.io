@@ -1,0 +1,76 @@
+.comments-page-wrapper {
+    min-height: 100vh;
+    background-color: #efebe6;
+    padding: 40px 400px ;
+    box-sizing: border-box;
+
+    justify-content: left;
+    align-items: flex-start;
+    position: absolute;
+
+}
+
+.comments-page-wrapper .container {
+    width: 100%;
+    min-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.comments-page-wrapper input,
+.comments-page-wrapper textarea,
+.comments-page-wrapper button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.comments-page-wrapper button {
+    background: #5b0a1a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.comments-page-wrapper button:hover {
+    background: #7a1226;
+}
+
+.comments-page-wrapper .comment {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.comments-page-wrapper .comment strong {
+    color: #5b0a1a;
+}
+
+.comments-page-wrapper .back-btn {
+    margin-bottom: 1rem;
+    background-color: #444;
+}
+
+.comments-page-wrapper .recipe-details {
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .comments-page-wrapper {
+        padding: 20px; /* 🔽 адаптивний паддінг */
+    }
+
+    .comments-page-wrapper .container {
+        padding: 20px;
+        min-width: unset;  /* 🔽 прибираємо мінімальну ширину */
+    }
+}
+  

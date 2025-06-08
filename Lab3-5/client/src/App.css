@@ -1,0 +1,74 @@
+/* Загальні стилі */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Контейнер */
+.container {
+  padding-top: 60px; /* щоб вміст не заходив під навігацію */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Навігація */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #007BFF;
+}
+
+/* Заголовок */
+#main h1 {
+  font-size: 48px;
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #222;
+}
+
+/* Кнопка */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #ddd;
+  margin-top: 60px;
+}

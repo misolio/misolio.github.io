@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background: #efebe6;
+  color: #212020;
+
+}
+
+.loginPage {
+  position: fixed;
+  inset: 0;
+  background: #efebe6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.registerLink {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.loginBox {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.loginBox h2 {
+  margin-bottom: 20px;
+  color: #5b0a1a;
+}
+
+.loginBox input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.loginBox button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5b0a1a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}і
+
+.loginBox button:hover {
+  background-color: #7b1e2f;
+}
+
+.backBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #efebe6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.backBtn:hover {
+  background-color: #7b1e2f;
+}
+.authorizedBox {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.authorizedBox h2 {
+  margin-bottom: 15px;
+  color: #5b0a1a;
+  font-size: 22px;
+}
+
+.authorizedBox p {
+  margin-bottom: 20px;
+  color: #444;
+  font-size: 16px;
+}
+
+.authorizedBox button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #5b0a1a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.authorizedBox button:hover {
+  background-color: #7b1e2f;
+}

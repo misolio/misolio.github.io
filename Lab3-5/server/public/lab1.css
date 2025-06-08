@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Helvetica, sans-serif;
+    background: #efebe6;
+    color: #212020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+header {
+    grid-area: header;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 32px;
+    position: relative;
+    border-radius: 15px;
+}
+#main{
+    background: url("C:\\Users\\solij\\OneDrive\\Рабочий стол\\photo_2025-03-12_23-01-08.jpg") no-repeat center/cover;
+}
+#baking{
+    background: url("https://shuba.life/static/content/thumbs/738x410/c/1d/7rn2gt---c9x5x50px50p-up--97c0d489195047b3c1b42d46b4a941dc.jpg") no-repeat center/cover;
+}
+#breakfast{
+    background: url("https://st4.depositphotos.com/32856862/40593/i/450/depositphotos_405934468-stock-photo-food-sweet-sandwich-table.jpg") no-repeat center/cover;
+}
+#lunch{
+    background: url("https://oryoki.de/media/image/news/98/md/bentobox_preview.jpg") no-repeat center/cover;
+}
+#snacks{
+    background: url("https://ritakafija.lv/wp-content/uploads/2017/02/nn-1.jpg") no-repeat center/cover;
+}
+#desserts{
+    background: url("https://www.foodandwine.com/thmb/ckc6L6xKox0WfpfO6dMkuVGPQOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Angel-Food-Cake-with-Three-Berry-Compote-FT-RECIPE0323-541a780b871441e0ab14383ee38acc44.jpg") no-repeat center/cover;
+}
+#main-dishes{
+    background: url("https://img.freepik.com/premium-photo/roasted-potatoes-with-spices-herbs-kitchen-table-top-view_341862-13420.jpg?w=360") no-repeat center/cover;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+header h1 {
+    position: relative;
+    z-index: 1;
+}
+nav {
+    grid-area: nav;
+    background: #595240;
+    padding: 15px;
+    text-align: right;
+    border-radius: 15px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.categories-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+.category-item {
+    width: 90%;
+    max-width: 500px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.category-item:hover {
+    transform: scale(1.05); 
+}
+.category-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+.category-item h2 {
+    position: relative;
+    z-index: 1;
+}
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+}
+.recipe-card {
+    position: relative;
+    width: 320px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    align-items: flex-end;
+    justify-content: flex-end; 
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.recipe-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Затемнення для кращої видимості тексту */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.recipe-overlay h3, 
+.recipe-overlay p {
+    color: white;
+    text-shadow:#212020;
+    margin-bottom: 8px;
+    text-align: left; 
+}
+
+.recipe-card p {
+    font-size: 14px;
+    color:  #efebe6 ;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 90%; /* Щоб текст не виходив за межі */
+}
+
+.recipe-card .delete-btn {
+    background: #5b0a1a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+.recipe-card .delete-btn:hover {
+    background: #5b0a1a;
+}
+.form-container {
+    background: #efebe6;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 100%;
+}
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #efebe6;
+    border-radius: 10px;
+}
+.form-container button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #595240;
+    color: #efebe6;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.comment-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #5b0a1a;
+    color: #efebe6;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.comment-link:hover {
+    background-color: #5b0a1a;
+}
+footer {
+    grid-area: footer;
+    background: #121211;
+    color: #efebe6;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: auto;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .recipes {
+        grid-template-columns: 1fr;
+    }
+    .recipe-card {
+        max-width: 100%;
+    }
+}
+
